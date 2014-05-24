@@ -22,7 +22,7 @@ colnames(dataset2)[1:2]<- c("Suject_ID", "Activity") #Name the subject ID and ac
 #2.Extracts only the measurements on the mean and standard deviation for each measurement. 
 colnames <- as.character(features[,2])                        #create a column name vector
 colnames                                                      # observe column names 
-dataset3 <-dataset2[,c(1:8, 43:48, 83:88, 123:128, 163:168)]  #Subset to obtain 32 important mean & sd measures of: gravity, tBodyAcc, tBodyAccJerk, tBodyGyro, tBodyGyroJerk
+dataset3 <-dataset2[,c(1:8, 43:48, 83:88, 123:128, 163:168)]  #Subset to obtain 30 important mean & sd measures of: gravity, tBodyAcc, tBodyAccJerk, tBodyGyro, tBodyGyroJerk
 
 #3.Use descriptive activity names to name the activities in the data set
 dataset3$Activity<- factor(dataset3$Activity, levels = c(1,2,3,4, 5, 6), labels = c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"))
