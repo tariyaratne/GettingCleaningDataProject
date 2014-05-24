@@ -6,8 +6,8 @@ These measurements include, the mean and standard deviation of 3-axial signals i
 
 **Variable**   ;				Definition  							
 ----------------------------------------------------------------------------------------------------------------------  
-**subjectid**; 	  	subject number  											
-**activity**;	  	Activity unertaken (walking, walking_upstairs, warlking_downstairs, sitting, standing, laying)  
+**subjectid**; 	  	Subject number  											
+**activity**;	  	Activity undertaken (walking, walking_upstairs, warlking_downstairs, sitting, standing, laying)  
 **tbodyaccmeanx**;     	Time-series Body Acceleration, Mean for X   
 **tbodyaccmeany**;   	Time-series Body Acceleration, Mean for Y     
 **tbodyaccmeanz**;   	Time-series Body Acceleration, Mean for Z    
