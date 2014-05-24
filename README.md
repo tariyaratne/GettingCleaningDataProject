@@ -1,7 +1,7 @@
 ### Data Dictionary
 ==========================
-This markdown file describes the data outpout from the tidydata.txt file.  
-Note: Only avearage measurments across repeated activities (per subject) for few important measurements are included in this file (these were described in the original features_info.txt file)  
+This markdown file describes the data output from the tidydata.txt file.  
+Note: Only avearage measurments across repeated activities (per subject) for few important measurements are included in the tidydata.txt (these were described in the original features_info.txt file)  
 These measurements include, the mean and standard deviation of 3-axial signals in the X, Y and Z directions for gravity, tBodyAcc, tBodyAccJerk, tBodyGyro, tBodyGyroJerk  
 
 **Variable**   ;				Definition  							
