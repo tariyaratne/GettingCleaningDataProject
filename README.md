@@ -6,11 +6,11 @@ and activity lables (ytrain and ytest) should be "row binded" in order to append
 all the measures tested  which should form the column labels in the single large dataset.  To form the single large dataset the appended datasets for results, subject IDs and activity labels
 should be "column binded".   
 
-2.The second step is to extract only the measurements on the mean and standard deviation for each measurement. 
+2. The second step is to extract only the measurements on the mean and standard deviation for each measurement. 
 
 3. The third step is to use the descriptive activity names to name the activities in the data set
 
-4.The fourth step is to appropriately labels the data set with descriptive activity names.
+4. The fourth step is to appropriately labels the data set with descriptive activity names.
 
 5. The fifth step is to create a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
