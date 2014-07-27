@@ -1,7 +1,7 @@
 ### How the script works...
 ========================================
 
-#1. The first step is to combine all the training and the test sets to create one large dataset.  The training and test sets for results(xtrain and xtest), subject IDs (subjtrain and subjtest),
+1. The first step is to combine all the training and the test sets to create one large dataset.  The training and test sets for results(xtrain and xtest), subject IDs (subjtrain and subjtest),
 and activity lables (ytrain and ytest) should be "row binded" in order to append the data into one vertically aligned dataset.  The features dataset comprise lables for
 all the measures tested  which should form the column labels in the single large dataset.  To form the single large dataset the appended datasets for results, subject IDs and activity labels
 should be "column binded".   
@@ -14,19 +14,19 @@ dataset2 <- cbind(subjids,activity,dataset1)         #Column bind subject ids, a
 colnames(dataset2)[1:2]<- c("Suject_ID", "Activity") #Name the subject ID and activity columns
 
 
-#2.The second step is to extract only the measurements on the mean and standard deviation for each measurement. 
+2.The second step is to extract only the measurements on the mean and standard deviation for each measurement. 
 
 colnames <- as.character(features[,2])                        #create a column name vector
 colnames                                                      # observe column names 
 dataset3 <-dataset2[,c(1:8, 43:48, 83:88, 123:128, 163:168)]  #Subset to obtain 30 important mean & sd measures of: gravity, tBodyAcc, tBodyAccJerk, tBodyGyro, tBodyGyroJerk
 
 
-#3. The third step is to use the descriptive activity names to name the activities in the data set
+3. The third step is to use the descriptive activity names to name the activities in the data set
 
 dataset3$Activity<- factor(dataset3$Activity, levels = c(1,2,3,4, 5, 6), labels = c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"))
 
 
-#4.The fourth step is to appropriately labels the data set with descriptive activity names.
+4.The fourth step is to appropriately labels the data set with descriptive activity names.
 
 colnames(dataset3)[1:8] <- c("subjectid", "activity", "tbodyaccmeanx", "tbodyaccmeany", "tbodyaccmeanz", "tbodyaccsdx", "tbodyaccsdy", "tbodyaccsdz")
 colnames(dataset3)[9:14] <- c("tgravaccmeanx", "tgravaccmeany", "tgravaccmeanz", "tgravaccsdx", "tgravaccsdy", "tgravaccsdz")
@@ -35,7 +35,7 @@ colnames(dataset3)[21:26] <- c("tbodygyromeanx", "tbodygyromeany", "tbodygyromea
 colnames(dataset3)[27:32] <- c("tbodygyrojerkmeanx", "tbodygyrojerkmeany", "tbodygyrojerkmeanz", "tbodygyrojerksdx", "tbodygyrojerksdy", "tbodygyrojerksdz")
 
 
-#5. The fifth step is to create a second, independent tidy data set with the average of each variable for each activity and each subject. 
+5. The fifth step is to create a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 library(plyr)
 finaldata <- ddply(dataset3, .(subjectid, activity),  function(datset3) colwise(mean)(dataset3[, 3:32]))
